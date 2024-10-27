@@ -50,8 +50,6 @@ int main() {
 
     //output 
 
-
-
     return 0;
 }
 
@@ -69,7 +67,30 @@ long long readList(list<string>& l) {
 
 }
 long long readVector(vector<string>& v) {
+    //local variables
+    string line;
+    int count = 0;
+    auto start = high_resolution_clock::now(); // Record the start time of the read operation
+    ifstream infile(FILENAME);
 
+    //file validation
+    if (!infile.is_open()) {
+        // If the file cannot be opened, display an error message and exit
+        cout << "Error: Unable to open file " << FILENAME << " for vector.\n";
+        exit(1);
+    }
+
+    //create a loop until all elements have been read, the insert line to vector using push_back
+
+
+
+   //end time of the read operation
+    auto end = high_resolution_clock::now();
+
+    // calculate the duration 
+    auto duration = duration_cast<microseconds>(end - start).count();
+
+    return duration;
 }
 long long insertVector(vector<string>& v) {
 
