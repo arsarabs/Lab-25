@@ -95,9 +95,6 @@ long long readSet(set<string>& s) {
         cout << "Error: Unable to open file " << FILENAME << " for vector.\n";
         exit(1);
     }
-
-    
-
     while (count < NUM_ELEMENTS) {
         if (!getline(infile, line)) {
             // If EOF is reached, clear the EOF flag and reset the file pointer to the beginning
@@ -145,10 +142,7 @@ long long readList(list<string>& l) {
        //But how do we insert when working with a list? We can use push back. Of course.
         l.push_back(line);
         count++; // and increment
-       
     }
-
-
     //close file
     infile.close();
 
@@ -175,15 +169,16 @@ long long readVector(vector<string>& v) {
     }
 
     //create a loop until all elements have been read, the insert line to vector using push_back
-
     while (count < NUM_ELEMENTS) {
-
-        //BOOKMARK: WORK ON HERE
-
+        if (!getline(infile, line)) {
+            // If EOF is reached, clear the EOF flag and reset the file pointer to the beginning
+            infile.clear();
+            infile.seekg(0);
+            continue;
+        }
         v.push_back(line); //push back into vector here
+        count++; //almost forgot to increment
     }
-
-
     //close file
     infile.close();
 
