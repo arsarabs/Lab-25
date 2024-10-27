@@ -142,7 +142,9 @@ long long readList(list<string>& l) {
             infile.seekg(0);
             continue;
         }
-       //But how do we insert when working with a list?
+       //But how do we insert when working with a list? We can use push back. Of course.
+        l.push_back(line);
+        count++; // and increment
        
     }
 
