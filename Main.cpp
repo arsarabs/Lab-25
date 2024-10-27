@@ -62,6 +62,12 @@ long long sortVector(vector<string>& v) {
 }
 long long readSet(set<string>& s) {
 
+    //local variables
+    string line;
+    int count = 0;
+    auto start = high_resolution_clock::now(); // Record the start time of the read operation
+    ifstream infile(FILENAME);
+
 }
 long long readList(list<string>& l) {
 
@@ -82,7 +88,14 @@ long long readVector(vector<string>& v) {
 
     //create a loop until all elements have been read, the insert line to vector using push_back
 
+    while (count < NUM_ELEMENTS) {
 
+        v.push_back(line); //push back into vector here
+    }
+
+
+    //close file
+    infile.close();
 
    //end time of the read operation
     auto end = high_resolution_clock::now();
