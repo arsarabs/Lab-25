@@ -55,22 +55,98 @@ int main() {
 
 //FUNCTION BODIES
 long long sortList(list<string>& l) {
+    // Record the start time of the sort operation
+    auto start = high_resolution_clock::now();
 
+    // Record end time of the sort operation
+    auto end = high_resolution_clock::now();
+
+    //WORK HERE: we can use the sort-list member function
+    l.sort();
+
+    auto duration = duration_cast<microseconds>(end - start).count();
+
+    return duration; 
 }
 long long sortVector(vector<string>& v) {
+    // Record the start time of the sort operation
+    auto start = high_resolution_clock::now();
 
+    // Record end time of the sort operation
+    auto end = high_resolution_clock::now();
+
+    //WORK HERE: the only difference when sorting a vector is using a simple algorithm
+    sort(v.begin(), v.end());
+
+    auto duration = duration_cast<microseconds>(end - start).count();
+
+    return duration; 
 }
 long long readSet(set<string>& s) {
-
     //local variables
     string line;
     int count = 0;
     auto start = high_resolution_clock::now(); // Record the start time of the read operation
     ifstream infile(FILENAME);
 
+    //file validation
+    if (!infile.is_open()) {
+        // If the file cannot be opened, display an error message and exit
+        cout << "Error: Unable to open file " << FILENAME << " for vector.\n";
+        exit(1);
+    }
+
+    //create a loop until all elements have been read, the insert line to vector using push_back
+
+    while (count < NUM_ELEMENTS) {
+
+       
+    }
+
+    //close file
+    infile.close();
+
+    //end time of the read operation
+    auto end = high_resolution_clock::now();
+
+    // calculate the duration 
+    auto duration = duration_cast<microseconds>(end - start).count();
+
+    return duration;
+
 }
 long long readList(list<string>& l) {
+    //local variables
+    string line;
+    int count = 0;
+    auto start = high_resolution_clock::now(); // Record the start time of the read operation
+    ifstream infile(FILENAME);
 
+    //file validation
+    if (!infile.is_open()) {
+        // If the file cannot be opened, display an error message and exit
+        cout << "Error: Unable to open file " << FILENAME << " for vector.\n";
+        exit(1);
+    }
+
+    //create a loop until all elements have been read, the insert line to vector using push_back
+
+    while (count < NUM_ELEMENTS) {
+
+      //BOOKMARK: WORK ON HERE
+    }
+
+
+    //close file
+    infile.close();
+
+    //end time of the read operation
+    auto end = high_resolution_clock::now();
+
+    // calculate the duration 
+    auto duration = duration_cast<microseconds>(end - start).count();
+
+    return duration;
 }
 long long readVector(vector<string>& v) {
     //local variables
@@ -89,6 +165,8 @@ long long readVector(vector<string>& v) {
     //create a loop until all elements have been read, the insert line to vector using push_back
 
     while (count < NUM_ELEMENTS) {
+
+        //BOOKMARK: WORK ON HERE
 
         v.push_back(line); //push back into vector here
     }
