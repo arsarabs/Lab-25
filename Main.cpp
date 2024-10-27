@@ -191,21 +191,75 @@ long long readVector(vector<string>& v) {
     return duration;
 }
 long long insertVector(vector<string>& v) {
+    // Record the start time of the insert operation
+    auto start = high_resolution_clock::now();
 
+    // Record end time of the insert operation
+    auto end = high_resolution_clock::now();
+
+    // Calculate 
+    auto duration = duration_cast<microseconds>(end - start).count();
+
+    return duration; // duration in microseconds
 }
 long long insertList(list<string>& l) {
+    // Record the start time of the insert operation
+    auto start = high_resolution_clock::now();
 
+    // Record end time of the insert operation
+    auto end = high_resolution_clock::now();
+
+    // Calculate 
+    auto duration = duration_cast<microseconds>(end - start).count();
+
+    return duration; // duration in microseconds
 }
 long long insertSet(set<string>& s) {
+    // Record the start time of the insert operation
+    auto start = high_resolution_clock::now();
 
+    // Record end time of the insert operation
+    auto end = high_resolution_clock::now();
+
+    // Calculate 
+    auto duration = duration_cast<microseconds>(end - start).count();
+
+    return duration; // duration in microseconds
 }
 long long deleteVector(vector<string>& v) {
+    // Record the start time of the insert operation
+    auto start = high_resolution_clock::now();
 
+    // Record end time of the insert operation
+    auto end = high_resolution_clock::now();
+
+    // Calculate 
+    auto duration = duration_cast<microseconds>(end - start).count();
+
+    return duration; // duration in microseconds
 }
 long long deleteList(list<string>& l) {
+    // Record the start time of the insert operation
+    auto start = high_resolution_clock::now();
 
+    // Record end time of the insert operation
+    auto end = high_resolution_clock::now();
+
+    // Calculate 
+    auto duration = duration_cast<microseconds>(end - start).count();
+
+    return duration; // duration in microseconds
 }
 long long deleteSet(set<string>& s) {
+    // Record the start time of the insert operation
+    auto start = high_resolution_clock::now();
 
+    // Record end time of the insert operation
+    auto end = high_resolution_clock::now();
+
+    // Calculate 
+    auto duration = duration_cast<microseconds>(end - start).count();
+
+    return duration; // duration in microseconds
 }
 
