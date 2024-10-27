@@ -24,11 +24,69 @@ long long sortVector(vector<string>& v);
 long long readSet(set<string>& s);
 long long readList(list<string>& l);
 long long readVector(vector<string>& v);
+long long insertVector(vector<string>& v);
+long long insertList(list<string>& l);
+long long insertSet(set<string>& s);
+long long deleteVector(vector<string>& v);
+long long deleteList(list<string>& l);
+long long deleteSet(set<string>& s);
 
 
 int main() {
 
+    //Conatiners
+
+    //Table
+
+    //store timing results here for each structure/operation
+
+    //read
+
+    //sort
+
+    //insert
+
+    //delete
+
+    //output 
+
+
 
     return 0;
+}
+
+//FUNCTION BODIES
+long long sortList(list<string>& l) {
+
+}
+long long sortVector(vector<string>& v) {
+
+}
+long long readSet(set<string>& s) {
+
+}
+long long readList(list<string>& l) {
+
+}
+long long readVector(vector<string>& v) {
+
+}
+long long insertVector(vector<string>& v) {
+
+}
+long long insertList(list<string>& l) {
+
+}
+long long insertSet(set<string>& s) {
+
+}
+long long deleteVector(vector<string>& v) {
+
+}
+long long deleteList(list<string>& l) {
+
+}
+long long deleteSet(set<string>& s) {
+
 }
 
