@@ -80,11 +80,11 @@ long long sortList(list<string>& l) {
     // Record the start time of the sort operation
     auto start = high_resolution_clock::now();
 
-    // Record end time of the sort operation
-    auto end = high_resolution_clock::now();
-
     //WORK HERE: we can use the sort-list member function
     l.sort();
+
+    // Record end time of the sort operation
+    auto end = high_resolution_clock::now();
 
     auto duration = duration_cast<microseconds>(end - start).count();
 
@@ -94,11 +94,13 @@ long long sortVector(vector<string>& v) {
     // Record the start time of the sort operation
     auto start = high_resolution_clock::now();
 
+    //WORK HERE: the only difference when sorting a vector is using a simple algorithm
+    sort(v.begin(), v.end());
+
+
     // Record end time of the sort operation
     auto end = high_resolution_clock::now();
 
-    //WORK HERE: the only difference when sorting a vector is using a simple algorithm
-    sort(v.begin(), v.end());
 
     auto duration = duration_cast<microseconds>(end - start).count();
 
