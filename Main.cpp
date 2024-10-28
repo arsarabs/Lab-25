@@ -281,6 +281,11 @@ long long deleteSet(set<string>& s) {
 }
 void display(const vector<string>& operation, const vector<long long>& vectorTimes, const vector<long long>& listTimes, const vector<long long>& setTimes) {
 
-    cout << "Operation: " << 
+    cout << "Operation: " << "Vector: " << "Lists: " << "Sets: " << endl;
+
+    //for loop for display
+    for (size_t i = 0; i < operation.size(); ++i) {
+
+    }
 }
 
