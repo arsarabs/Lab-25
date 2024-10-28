@@ -228,7 +228,7 @@ long long insertSet(set<string>& s) {
 }
 long long deleteVector(vector<string>& v) {
     // Record the start time of the insert operation
-    auto start = high_resolution_clock::now();
+    auto start = high_resolution_clock::now(); 
 
     //get mid point
     size_t vec_mid = v.size() / 2;
@@ -263,6 +263,7 @@ long long deleteSet(set<string>& s) {
     auto start = high_resolution_clock::now();
 
     // create iterator pointing to beginning of list, advance to middle, then erase
+
 
     // Record end time of the insert operation
     auto end = high_resolution_clock::now();
