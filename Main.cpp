@@ -335,8 +335,9 @@ void display(const vector<string>& operation, const vector<long long>& vectorTim
             cout << right << setw(10) << setTimes[i] << "    ";
         }
         else {
-            cout << right << setw(10) << "-1" << "    " << endl;
+            cout << right << setw(10) << "-1" << "    ";
         }
+        cout << endl;
     }
 }
 
