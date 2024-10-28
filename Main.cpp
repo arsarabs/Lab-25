@@ -30,25 +30,44 @@ long long insertSet(set<string>& s);
 long long deleteVector(vector<string>& v);
 long long deleteList(list<string>& l);
 long long deleteSet(set<string>& s);
-void display(const vector<string>& operation, const vector<long long>& vectorTimes, const vector<long long>& listTimes, const vector<long long>& setTimes);
-
+void display(const vector<string>& operation, 
+    const vector<long long>& vectorTimes,
+    const vector<long long>& listTimes, 
+    const vector<long long>& setTimes);
 
 int main() {
 
     //Conatiners
+    vector<string> v;
+    list<string> l;
+    set<string> s;
 
     //Table
+    vector<string> operations = { "Read", "Sort", "Insert", "Delete" };
 
     //store timing results here for each structure/operation
+    vector<long long> vectorTimes(4, 0);
+    vector<long long> listResult(4, 0);
+    vector<long long> setResult(4, 0);
 
     //read
-
+    vectorTimes[0] = readVector(v);
+    listResult[0] = readList(l);
+    setResult[0] = readSet(s);
     //sort
-
+    vectorTimes[1] = readVector(v);
+    listResult[1] = readList(l);
+    setResult[1] = readSet(s);
     //insert
 
-    //delete
+    vectorTimes[2] = readVector(v);
+    listResult[2] = readList(l);
+    setResult[2] = readSet(s);
 
+    //delete
+    vectorTimes[3] = readVector(v);
+    listResult[3] = readList(l);
+    setResult[3] = readSet(s);
     //output 
 
     return 0;
@@ -281,11 +300,34 @@ long long deleteSet(set<string>& s) {
 }
 void display(const vector<string>& operation, const vector<long long>& vectorTimes, const vector<long long>& listTimes, const vector<long long>& setTimes) {
 
-    cout << "Operation: " << "Vector: " << "Lists: " << "Sets: " << endl;
+    //updated output with iomanip
+    cout << left << setw(12) << "Operation"
+        << right << setw(12) << "Vector"
+        << right << setw(12) << "List"
+        << right << setw(12) << "Set" << endl;
 
     //for loop for display
     for (size_t i = 0; i < operation.size(); ++i) {
+        cout << left << setw(12) << operation[i] << "    ";
 
+        if (vectorTimes[i] != -1) {
+            cout << right << setw(10) << vectorTimes[i] << "    ";
+        }
+        else {
+            cout << right << setw(10) << "-1" << "    ";
+        }
+        if (listTimes[i] != -1) {
+            cout << right << setw(10) << listTimes[i] << "    ";
+        }
+        else {
+            cout << right << setw(10) << "-1" << "    ";
+        }
+        if (setTimes[i] != -1) {
+            cout << right << setw(10) << setTimes[i] << "    ";
+        }
+        else {
+            cout << right << setw(10) << "-1" << "    " << endl;
+        }
     }
 }
 
