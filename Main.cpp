@@ -30,6 +30,7 @@ long long insertSet(set<string>& s);
 long long deleteVector(vector<string>& v);
 long long deleteList(list<string>& l);
 long long deleteSet(set<string>& s);
+void display(const vector<string>& operation, const vector<long long>& vectorTimes, const vector<long long>& listTimes, const vector<long long>& setTimes);
 
 
 int main() {
@@ -277,5 +278,9 @@ long long deleteSet(set<string>& s) {
     auto duration = duration_cast<microseconds>(end - start).count();
 
     return duration; // duration in microseconds
+}
+void display(const vector<string>& operation, const vector<long long>& vectorTimes, const vector<long long>& listTimes, const vector<long long>& setTimes) {
+
+    cout << "Operation: " << 
 }
 
