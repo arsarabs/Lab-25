@@ -249,6 +249,9 @@ long long deleteList(list<string>& l) {
     auto start = high_resolution_clock::now();
 
    // create iterator pointing to beginning of list, advance to middle, then erase
+    auto it = l.begin();
+    advance(it, l.size() / 2);
+    l.erase(it);
 
     // Record end time of the insert operation
     auto end = high_resolution_clock::now();
@@ -262,8 +265,10 @@ long long deleteSet(set<string>& s) {
     // Record the start time of the insert operation
     auto start = high_resolution_clock::now();
 
-    // create iterator pointing to beginning of list, advance to middle, then erase
-
+    // create iterator pointing to beginning of set, advance to middle, then erase
+    auto it = s.begin();
+    advance(it, s.size() / 2);
+    s.erase(it);
 
     // Record end time of the insert operation
     auto end = high_resolution_clock::now();
