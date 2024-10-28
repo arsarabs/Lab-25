@@ -55,20 +55,22 @@ int main() {
     listResult[0] = readList(l);
     setResult[0] = readSet(s);
     //sort
-    vectorTimes[1] = readVector(v);
-    listResult[1] = readList(l);
-    setResult[1] = readSet(s);
+    vectorTimes[1] = sortVector(v);
+    listResult[1] = sortList(l);
+    setResult[1] = -1; // this lets us know sort time not applicaable
     //insert
-
-    vectorTimes[2] = readVector(v);
-    listResult[2] = readList(l);
-    setResult[2] = readSet(s);
+     
+    vectorTimes[2] = insertVector(v);
+    listResult[2] = insertList(l);
+    setResult[2] = insertSet(s);
 
     //delete
-    vectorTimes[3] = readVector(v);
-    listResult[3] = readList(l);
-    setResult[3] = readSet(s);
-    //output 
+    vectorTimes[3] = deleteVector(v);
+    listResult[3] = deleteList(l);
+    setResult[3] = deleteSet(s);
+    //output
+    // 
+    display(operations, vectorTimes, listResult, setResult); 
 
     return 0;
 }
